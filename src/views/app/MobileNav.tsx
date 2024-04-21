@@ -7,22 +7,22 @@ const mobileNavItems = [
     {
         icon: <HomeIcon className="w-7 h-7"/>,
         label: 'Home',
-        to: '/'
+        to: '/app'
     },
     {
         icon: <BiHistory className="w-7 h-7"/>,
         label: 'History',
-        to: '/history'
+        to: '#'
     },
     {
         icon: <PiChartBarDuotone className="w-7 h-7"/>,
         label: 'Impact',
-        to: '/impact'
+        to: '#'
     },
     {
         icon: <PiTrophyDuotone className="w-7 h-7"/>,
         label: 'Benefits',
-        to: '/benefits'
+        to: '/app/benefits'
     },
 ]
 

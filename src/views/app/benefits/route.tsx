@@ -9,8 +9,7 @@ import paybackBenefitImg from '~/assets/benefits/payback-benefit.jpg'
 
 export const meta: MetaFunction = () => {
     return [
-        { title: "New Remix App" },
-        { name: "description", content: "Welcome to Remix!" },
+        { title: "ecommute berlin - benefits" },
     ];
 };
 

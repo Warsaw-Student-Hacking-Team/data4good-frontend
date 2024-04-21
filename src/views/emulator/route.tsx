@@ -3,6 +3,13 @@ import 'react-device-frameset/styles/marvel-devices.min.css'
 import {FiArrowLeft} from "react-icons/fi";
 import {Link, useNavigate} from "@remix-run/react";
 import {useEffect} from "react";
+import type {MetaFunction} from "@remix-run/node";
+
+export const meta: MetaFunction = () => {
+    return [
+        {title: "ecommute berlin - mobile app"},
+    ];
+}
 
 const MOBILE_THRESHOLD = 600;
 

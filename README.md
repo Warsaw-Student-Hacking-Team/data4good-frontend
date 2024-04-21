@@ -1,36 +1,19 @@
-# Welcome to Remix + Vite!
+# ecommute berlin - frontend app
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
+This is the repository for the frontend app of the ecommute berlin project for the data4good hackathon 2024.
+
+Technologies used:
+* remix run
+* react & typescript
+* tailwind css
+
+Scalability could be achieved by utylizing cloud technologies as our app is dockerized and can be deployed to any cloud provider.
 
 ## Development
 
-Run the Vite dev server:
 
 ```shellscript
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`

@@ -6,15 +6,13 @@ import {PiCarProfileFill} from "react-icons/pi";
 import RideSchedule from "~/views/app/dashboard/RideSchedule";
 import AppLayout from "~/views/app/AppLayout";
 import {Link, useLoaderData} from "@remix-run/react";
-import styles from './styles/dashboard.module.css'
 import {json} from "@remix-run/node";
 import {FiBell} from "react-icons/fi";
 import landingStyles from '../../landing/styles/landing.module.css'
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "ecommute berlin - dashboard" },
   ];
 };
 
@@ -26,19 +24,10 @@ export const loader = async () => {
 
 export default function Index() {
     const {user} = useLoaderData();
-    console.log({user})
 
   return (
       <AppLayout>
           <div className="pt-5 px-5 w-full">
-              {/*<div className="flex justify-between items-center py-6 w-full">*/}
-              {/*    <h1 className="text-3xl font-bold font-[Berlin] transform translate-y-1">*/}
-              {/*        Hello Helga!*/}
-              {/*    </h1>*/}
-              {/*    <div className="rounded-full p-2 border border-2">*/}
-              {/*        <PersonIcon className="w-6 h-6"/>*/}
-              {/*    </div>*/}
-              {/*</div>*/}
               <div className="bg-[#0F1828] text-white py-2 px-2 rounded-xl shadow-xl">
                   <div className="flex justify-center mt-1 mb-2">
                       <span>
@@ -85,7 +74,7 @@ export default function Index() {
               </div>
               <div className="mt-5">
                   <div className="grid grid-cols-3 gap-5">
-                      <div
+                      <Link to="/app/car/ride"
                           className="border border-[#58c55f] rounded-lg p-2 shadow-[#58c55f]/40 shadow-2xl bg-transparent text-[#0F1828]">
                           <div className="">
                               <div className="flex justify-center text-[#58c55f]">
@@ -93,7 +82,7 @@ export default function Index() {
                               </div>
                               <span className="mt-1 block text-center">Ride</span>
                           </div>
-                      </div>
+                      </Link>
                       <Link to="/app/bike/rental"
                             className="border border-[#58c55f] rounded-lg p-2 shadow-[#58c55f]/40 shadow-xl bg-transparent text-[#0F1828]">
                           <div className="">

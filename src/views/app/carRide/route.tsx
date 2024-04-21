@@ -1,20 +1,12 @@
 import type { MetaFunction } from "@remix-run/node";
-import {PersonIcon} from "@radix-ui/react-icons";
-import PointsDailyChart from "~/views/app/dashboard/Chart";
-import {RiBikeLine, RiTaxiWifiLine} from "react-icons/ri";
-import {PiCarProfileFill} from "react-icons/pi";
-import RideSchedule from "~/views/app/dashboard/RideSchedule";
 import AppLayout from "~/views/app/AppLayout";
 import {Link, useLoaderData} from "@remix-run/react";
-import styles from './styles/dashboard.module.css'
 import {json} from "@remix-run/node";
 import {FiBell} from "react-icons/fi";
-import landingStyles from '../../landing/styles/landing.module.css'
 
 export const meta: MetaFunction = () => {
     return [
-        { title: "New Remix App" },
-        { name: "description", content: "Welcome to Remix!" },
+        { title: "ecommute berlin - car rides" },
     ];
 };
 
