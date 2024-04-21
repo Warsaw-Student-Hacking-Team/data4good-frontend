@@ -10,6 +10,8 @@ const routes = (defineRoutes): RemixConfig['routes'] => {
             route("bike/rental", "views/app/bikeRental/routes/rental.route.tsx");
             route("bike/riding", "views/app/bikeRental/routes/riding.route.tsx");
             route("bike/finished", "views/app/bikeRental/routes/finished.route.tsx");
+            route("car/ride", "views/app/carRide/route.tsx");
+            route("benefits", "views/app/benefits/route.tsx");
         });
         route("admin", "views/admin/route.tsx");
     });
