@@ -1,6 +1,7 @@
 import BikeAnimation from "~/views/app/bikeRental/BikeAnimation.client";
 import {ClientOnly} from "remix-utils/client-only";
 import {useEffect, useState} from "react";
+import {Link} from "@remix-run/react";
 
 const BikeRidingPage = () => {
     const [rawSeconds, setRawSeconds] = useState(0);
@@ -45,9 +46,9 @@ const BikeRidingPage = () => {
                 </div>
 
                 <div className="mt-5">
-                    <button className="bg-white text-red-500 text-center font-bold block w-full px-5 py-2 rounded-lg">
+                    <Link to="/app/bike/finished" className="bg-white text-red-500 text-center font-bold block w-full px-5 py-2 rounded-lg">
                         End ride
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
