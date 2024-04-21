@@ -11,6 +11,8 @@ Scalability could be achieved by utilizing cloud technologies as our app is dock
 
 Checkout our ML repo at: https://github.com/Warsaw-Student-Hacking-Team/data4good-ml
 
+The live demo can be found at: https://ecommute.micorix.dev
+
 ## Development
 
 
