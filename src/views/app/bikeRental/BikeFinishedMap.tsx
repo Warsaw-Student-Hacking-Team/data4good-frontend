@@ -8,6 +8,7 @@ import {MapboxOverlay} from '@deck.gl/mapbox';
 import type {MapboxOverlayProps} from '@deck.gl/mapbox';
 import {getBerlinNextBikeStationsGeoJSON} from "~/lib/mobilityProviders/nextBike";
 import bikeStationIcon from '~/assets/bike-station-icon.png'
+import sampleRideGeoJSON from "~/views/app/bikeRental/sampleRideGeoJSON";
 function DeckGLOverlay(props: MapboxOverlayProps) {
     const overlay = useControl(() => new MapboxOverlay(props));
     overlay.setProps(props);
@@ -26,20 +27,13 @@ type DataType = {
     to: [longitude: number, latitude: number];
 };
 
-const BikeRentalMap = ({mapboxAccessToken}) => {
+const BikeFinishedMap = ({mapboxAccessToken}) => {
     const layers = [
         new GeoJsonLayer({
-            data: getBerlinNextBikeStationsGeoJSON(),
+            data: sampleRideGeoJSON,
             pickable: true,
-            pointType: 'icon',
-            getIcon: () => ({
-                url: bikeStationIcon,
-                width: 512,
-                height: 512,
-                anchorY: 512
-            }),
-            getIconSize: 30,
-            iconSizeMinPixels: 30
+            getLineWidth: 20,
+            getLineColor: [15, 24, 40]
         })
     ];
     return (
@@ -57,4 +51,4 @@ const BikeRentalMap = ({mapboxAccessToken}) => {
     );
 }
 
-export default BikeRentalMap
+export default BikeFinishedMap
